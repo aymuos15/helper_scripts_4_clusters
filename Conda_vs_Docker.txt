@@ -1,0 +1,13 @@
+Conda is a dependency manager (like pipenv), a Conda Environment is a specific set of dependency (like a venv/.virtualenvs created by pipenv, or even a requirements.txt file).
+
+A docker image is an easily reproducible execution environment, like a template for a virtual machine. A docker container is a *virtual machine created from that template. When you do "docker run ...", it downloads the docker image you specified (the template), and then spawn a docker container (the *virtual machine) from that docker image (the template).
+
+Or, to see it differently :
+
+Conda/pipenv is a dependency manager at the 'python' level. You tell it which python library you want.
+
+Docker image is a dependency manager at the *'os' level. When you create a docker images (a template), you can use conda/pipenv for your code dependency, but you could also do other things (like install cuda, populate folders with examples, or ensure that you are running exactly with python 3.7.1, etc...).
+
+*: The technicalities makes it not quite a virtual machine, but for all intent and purpose, you can think of it as if it was a virtual machine.
+
+Taken from: https://www.reddit.com/r/learnmachinelearning/comments/kd88p8/what_is_the_difference_between_using_a_docker/
